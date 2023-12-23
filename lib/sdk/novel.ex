@@ -2,6 +2,7 @@ defmodule OASI.SDK.Novel do
   @moduledoc """
   Provides struct and type for a Novel
   """
+  use OpenApiSpexImpl.Schema
 
   @type t :: %__MODULE__{name: String.t(), published: String.t(), slug: String.t()}
 

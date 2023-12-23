@@ -2,6 +2,7 @@ defmodule OASI.SDK.Serial do
   @moduledoc """
   Provides struct and type for a Serial
   """
+  use OpenApiSpexImpl.Schema
 
   @type t :: %__MODULE__{
           beginning: String.t(),

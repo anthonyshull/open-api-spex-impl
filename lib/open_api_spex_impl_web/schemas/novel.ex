@@ -1,4 +1,8 @@
 defmodule OpenApiSpexImplWeb.Schemas.Novel do
+  @moduledoc """
+
+  """
+
   require OpenApiSpex
 
   alias OpenApiSpex.Schema

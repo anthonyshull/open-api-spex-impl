@@ -9,6 +9,7 @@ defmodule OpenApiSpexImplWeb.AuthorsController do
 
   alias OpenApiSpex.Schema
 
+  alias OpenApiSpexImpl.Authors
   alias OpenApiSpexImpl.Schemas.AuthorResponse
 
   operation(:show,
@@ -31,7 +32,7 @@ defmodule OpenApiSpexImplWeb.AuthorsController do
     ]
   )
 
-  def show(conn, _) do
-    json(conn, %{})
+  def show(conn, params) do
+    json(conn, Authors.get(params))
   end
 end

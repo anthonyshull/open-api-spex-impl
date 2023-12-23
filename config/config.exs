@@ -36,7 +36,8 @@ config :oapi_generator,
   default: [
     output: [
       base_module: OASI.SDK,
-      location: "./lib/sdk"
+      location: "./lib/sdk",
+      schema_use: OpenApiSpexImpl.Schema
     ]
   ]
 
