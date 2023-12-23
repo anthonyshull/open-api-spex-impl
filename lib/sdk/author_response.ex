@@ -1,12 +1,12 @@
-defmodule OASI.SDK.AuthorResponse do
+defmodule OASI.AuthorResponse do
   @moduledoc """
   Provides struct and type for a AuthorResponse
   """
   use OpenApiSpexImpl.Schema
 
   @type t :: %__MODULE__{
-          data: OASI.SDK.Author.t() | nil,
-          included: [OASI.SDK.Novel.t() | OASI.SDK.Serial.t()] | nil
+          data: OASI.Author.t() | nil,
+          included: [OASI.Novel.t() | OASI.Serial.t()] | nil
         }
 
   defstruct [:data, :included]
@@ -16,9 +16,6 @@ defmodule OASI.SDK.AuthorResponse do
   def __fields__(type \\ :t)
 
   def __fields__(:t) do
-    [
-      data: {OASI.SDK.Author, :t},
-      included: [union: [{OASI.SDK.Novel, :t}, {OASI.SDK.Serial, :t}]]
-    ]
+    [data: {OASI.Author, :t}, included: [union: [{OASI.Novel, :t}, {OASI.Serial, :t}]]]
   end
 end

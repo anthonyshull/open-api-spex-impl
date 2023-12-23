@@ -1,4 +1,4 @@
-defmodule OASI.SDK.Serial do
+defmodule OASI.Serial do
   @moduledoc """
   Provides struct and type for a Serial
   """

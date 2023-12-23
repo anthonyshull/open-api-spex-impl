@@ -3,7 +3,7 @@ defmodule OpenApiSpexImpl.Authors do
 
   """
 
-  alias OASI.SDK.{Author, AuthorResponse, Novel, Serial}
+  alias OASI.{Author, AuthorResponse, Novel, Serial}
 
   def get(_) do
     %AuthorResponse{

@@ -35,7 +35,7 @@ defmodule OpenApiSpexImpl.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:hackney, "1.20.1"},
       {:jason, "1.4.1"},
-      {:oapi_generator, "0.1.0-rc.3", only: :dev, runtime: false},
+      {:oapi_generator, "0.1.0-rc.3"},
       {:open_api_spex, "3.18.1"},
       {:phoenix, "1.7.10"},
       {:plug_cowboy, "2.6.1"},

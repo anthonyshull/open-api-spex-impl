@@ -24,6 +24,8 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :logger, level: :warning
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
@@ -35,10 +37,15 @@ config :mime, :extensions, %{
 config :oapi_generator,
   default: [
     output: [
-      base_module: OASI.SDK,
+      base_module: OASI,
+      default_client: OpenApiSpexImpl.Client,
       location: "./lib/sdk",
       schema_use: OpenApiSpexImpl.Schema
-    ]
+    ],
+    naming: [
+      default_operation_module: SDK
+    ],
+    renderer: OpenApiSpexImpl.Renderer
   ]
 
 config :tesla, adapter: Tesla.Adapter.Hackney

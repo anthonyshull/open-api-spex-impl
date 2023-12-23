@@ -1,4 +1,4 @@
-defmodule OASI.SDK.Author do
+defmodule OASI.Author do
   @moduledoc """
   Provides struct and type for a Author
   """

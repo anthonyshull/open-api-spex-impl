@@ -1,4 +1,4 @@
-defmodule OASI.SDK.Novel do
+defmodule OASI.Novel do
   @moduledoc """
   Provides struct and type for a Novel
   """
