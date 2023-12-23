@@ -8,5 +8,5 @@ This example application defines a OAS 3 then generates an SDK based on the outp
 %> mix api.gen default openapi.yaml
 %> iex -S mix phx.server
 
-%> curl "http://localhost:4000/api/authors/charles-dickens?included=novels,serials"
+iex> OASI.SDK.Operations.open_api_spex_impl_web_authors_controller_show("charles-dickens", include: ["novels", "serials"])
 ```
