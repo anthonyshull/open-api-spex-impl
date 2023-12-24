@@ -10,14 +10,14 @@ This example application defines a OAS 3 then generates an SDK based on the outp
 
 iex> OASI.SDK.authors_show("charles-dickens", include: ["novels", "serials"])
 %OASI.AuthorResponse{
-  data: %{"name" => "Charles Dickens", "slug" => "charles-dickens"},
+  data: %{name: "Charles Dickens", slug: "charles-dickens"},
   included: [
-    %{"name" => "Hard Times", "published" => "1854", "slug" => "hard-times"},
+    %{name: "Hard Times", slug: "hard-times", published: "1854"},
     %{
-      "beginning" => "1852",
-      "ending" => "1853",
-      "name" => "Bleak House",
-      "slug" => "bleak-house"
+      name: "Bleak House",
+      slug: "bleak-house",
+      ending: "1853",
+      beginning: "1852"
     }
   ]
 }
