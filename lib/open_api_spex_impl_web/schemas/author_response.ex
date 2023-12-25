@@ -28,16 +28,19 @@ defmodule OpenApiSpexImpl.Schemas.AuthorResponse do
     example: %{
       "data" => %{
         "name" => "Charles Dickens",
+        "type" => "author",
         "slug" => "charles-dickens"
       },
       "included" => [
         %{
           "name" => "Hard Times",
+          "type" => "novel",
           "slug" => "hard-times",
           "published" => "1854"
         },
         %{
           "name" => "Bleak House",
+          "type" => "serial",
           "slug" => "bleak-house",
           "beginning" => "1852",
           "ending" => "1853"

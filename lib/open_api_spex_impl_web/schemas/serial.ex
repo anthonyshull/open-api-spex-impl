@@ -8,10 +8,11 @@ defmodule OpenApiSpexImplWeb.Schemas.Serial do
   alias OpenApiSpex.Schema
 
   OpenApiSpex.schema(%{
-    description: "A published writer.",
+    description: "A narrative published in sequential releases",
     type: :object,
     properties: %{
       name: %Schema{type: :string, description: "The serial's name"},
+      type: %Schema{type: :string, description: "The type of object this is", default: "serial"},
       slug: %Schema{
         type: :string,
         description: "A unique identifier based on the serial's name",

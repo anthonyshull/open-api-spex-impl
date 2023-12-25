@@ -8,10 +8,11 @@ defmodule OpenApiSpexImplWeb.Schemas.Novel do
   alias OpenApiSpex.Schema
 
   OpenApiSpex.schema(%{
-    description: "A published writer",
+    description: "A narrative of book length",
     type: :object,
     properties: %{
       name: %Schema{type: :string, description: "The novel's name"},
+      type: %Schema{type: :string, description: "The type of object this is", default: "novel"},
       slug: %Schema{
         type: :string,
         description: "A unique identifier based on the novel's name",
